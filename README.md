@@ -1,53 +1,46 @@
 # Terraform Production Remote Backend
 
-## Overview
+## Project Overview
 
-Built a production-grade Terraform remote backend using:
+Production-grade Terraform backend implementation using:
 
-• Amazon S3
-• DynamoDB State Locking
-• Versioning
-• Server Side Encryption
-• Public Access Blocking
+- Amazon S3 remote state storage
+- DynamoDB state locking
+- Encryption
+- Versioning
+- Secure backend architecture
 
-This project demonstrates how Terraform teams securely collaborate using a centralized remote state.
 
--------------------------------------------------------
-
-Architecture
-
-(Local Machine)
-
-↓
+## Architecture
 
 Terraform CLI
-
-↓
-
+      |
+      |
 Amazon S3
-(Remote State)
+(State Storage)
 
-↓
-
+      |
+      |
 DynamoDB
 (State Locking)
 
--------------------------------------------------
 
-Skills Demonstrated
+## Skills Demonstrated
 
-✔ Infrastructure as Code
+- Terraform backend configuration
+- Remote state migration
+- Infrastructure state management
+- AWS S3 security
+- DynamoDB locking
+- Git repository hygiene
 
-✔ Remote State Management
 
-✔ State Locking
+## Troubleshooting
 
-✔ Production Terraform
+### GitHub rejected Terraform provider files
 
-✔ Backend Migration
+Problem:
+Terraform provider binaries exceeded GitHub 100MB limit.
 
-✔ AWS CLI
-
-✔ Terraform State Commands
-
-✔ AWS Security Best Practices
+Solution:
+Removed `.terraform/` from Git history and added `.gitignore`.
